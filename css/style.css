@@ -1,0 +1,54 @@
+
+
+td,th,table {
+    border: 2px solid rgb(124, 34, 34);
+    padding: 10px;
+    text-align: center;
+    
+}
+table{
+    margin-left: 150px;
+    margin-top: 150px;
+    border-collapse: collapse;
+    background-color: rgb(248, 217, 177);
+}
+td{
+    background-color: rgb(214, 246, 247);
+}
+body{
+    background-color: cornsilk;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+.i{
+    border-radius: 8px;
+    width: 50%px;
+    height: 50px;
+    margin-left: 20px;
+    
+}
+.lo{
+    float: left;
+}
+.loo{
+    float: left;
+    margin-top: 0px;
+}
+.img{
+    float: left;
+}
+.link{
+    width: 100%px;
+    height: 150px;
+}
+main{
+    width: 100%px;
+    height: 150px;
+}
+.op{
+    color: rgb(3, 75, 99);
+    float: right;
+    margin: 20px;
+}
