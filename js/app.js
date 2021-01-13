@@ -28,6 +28,7 @@ function Locations(locationname, mincusthour, maxcusthour, avcookiescust) {
   this.amcookieshour = [];
   this.totalsum = 0;
   locationObjects.push(this);
+  
 }
 
 Locations.prototype.rancusthour = function () {
@@ -69,6 +70,7 @@ Locations.prototype.run = function () {
 };
 //oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+//oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 var Seattle = new Locations("Seattle", "23", "65", "6.3");
 var Tokyo = new Locations("Tokyo", "3", "24", "1.2");
 var Dubai = new Locations("Dubai", "11", "38", "3.7");
@@ -108,6 +110,8 @@ function maketable() {
   cornercell = document.createElement("th");
   headerrow.appendChild(cornercell);
 
+  
+
   for (let i = 0; i < hours.length; i++) {
     hourcells = document.createElement("th");
     hourcells.textContent = hours[i];
@@ -126,42 +130,38 @@ maketable();
 
 //ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
-Seattle.rancusthour();
-Seattle.cookieshourrancust();
-Seattle.run();
-console.log(Seattle);
-
-Tokyo.rancusthour();
-Tokyo.cookieshourrancust();
-Tokyo.run();
-console.log(Tokyo);
-
-Dubai.rancusthour();
-Dubai.cookieshourrancust();
-Dubai.run();
-console.log(Dubai);
-
-Paris.rancusthour();
-Paris.cookieshourrancust();
-Paris.run();
-console.log(Paris);
-
-Lima.rancusthour();
-Lima.cookieshourrancust();
-Lima.run();
-console.log(Lima);
+for (let a = 0; a < locationObjects.length; a++) {
+  locationObjects[a].rancusthour();
+  locationObjects[a].cookieshourrancust();
+  locationObjects[a].run();
+  console.log(locationObjects[a]);
+  
+}
 
 
 
+
+//ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
 
 
   function totalarrow (){
+
+    
+   
+  
     for (let index = 0; index < hours.length; index++) {
         for (let o = 0; o < locationObjects.length; o++) {
           colomsum = colomsum + locationObjects[o].amcookieshour[index];
+          
+          
         }
         totalforeachhour.push(colomsum);
+        colomsum=0;
+        
+        
+        
       }
+      totalforeachhour.push(bigtotal);
       
       
       console.log('totalforeachhour', totalforeachhour);
@@ -169,9 +169,12 @@ console.log(Lima);
       headerrow = document.createElement("tr");
       mainTable.appendChild(headerrow);
       cornercell = document.createElement("th");
+      
+      cornercell.textContent='Totals per hour';
+  
       headerrow.appendChild(cornercell);
       
-    
+     
     
       for (let i = 0; i < hours.length; i++) {
         lastsumcell = document.createElement("th");
@@ -185,8 +188,52 @@ console.log(Lima);
     
 
   } 
+//oppppppppppppppppppppppppppppppppppppooooooopppoppooooooooooooooooooooooooooooooooooooooooooooooooooo
 
+
+var div = document.getElementById('formSection');
+  
+div.addEventListener('submit',addForm);
+
+function addForm (event){
+
+  
+  // namecell = document.createElement("td");
+  // namecell.textContent = this.locationname;
+  // locationdata.appendChild(namecell);
+
+ 
+
+event.preventDefault();
+var addedlocation=[event.target.ln.value,event.target.min.value,event.target.max.value,event.target.av.value];
+  
+ var newlocation = new Locations(addedlocation[0],addedlocation[1],addedlocation[2],addedlocation[3]);
+ 
+//  locationObjects.push(this.newlocation);
+ newlocation.rancusthour();
+ newlocation.cookieshourrancust();
+ newlocation.run();
+}
+
+
+  
+   
+   
+
+
+
+
+
+  
+
+
+
+
+
+//kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
   totalarrow ();
 
 
+
+ 
   
