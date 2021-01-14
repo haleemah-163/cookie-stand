@@ -210,10 +210,19 @@ var addedlocation=[event.target.ln.value,event.target.min.value,event.target.max
  var newlocation = new Locations(addedlocation[0],addedlocation[1],addedlocation[2],addedlocation[3]);
  
 //  locationObjects.push(this.newlocation);
+mainTable.removeChild(headerrow);
  newlocation.rancusthour();
  newlocation.cookieshourrancust();
  newlocation.run();
+
+ 
+//  for (let i = 1; i < hours.length-1; i++) {
+//   lastsumcell = document.createElement("th");
+//   lastsumcell.textContent = totalforeachhour[i-1];
+  
+  mainTable.appendChild(headerrow);
 }
+
 
 
   
