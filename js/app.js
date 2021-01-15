@@ -219,10 +219,8 @@ mainTable.removeChild(headerrow);
  newlocation.run();
 
 
- mainTable.appendChild(headerrow);
  totalarrow();
 }
-
 
 
   totalarrow ();
