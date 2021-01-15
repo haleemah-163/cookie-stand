@@ -27,7 +27,9 @@ function Locations(locationname, mincusthour, maxcusthour, avcookiescust) {
   this.custhourarray = [];
   this.amcookieshour = [];
   this.totalsum = 0;
+  // this.cookieshourrancust();
   locationObjects.push(this);
+
   
 }
 
@@ -188,6 +190,7 @@ for (let a = 0; a < locationObjects.length; a++) {
     
 
   } 
+  
 //oppppppppppppppppppppppppppppppppppppooooooopppoppooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 
@@ -209,37 +212,19 @@ var addedlocation=[event.target.ln.value,event.target.min.value,event.target.max
   
  var newlocation = new Locations(addedlocation[0],addedlocation[1],addedlocation[2],addedlocation[3]);
  
-//  locationObjects.push(this.newlocation);
+//  locationObjects.push(newlocation);
 mainTable.removeChild(headerrow);
  newlocation.rancusthour();
  newlocation.cookieshourrancust();
  newlocation.run();
 
- 
-//  for (let i = 1; i < hours.length-1; i++) {
-//   lastsumcell = document.createElement("th");
-//   lastsumcell.textContent = totalforeachhour[i-1];
-  
-  mainTable.appendChild(headerrow);
+
+ mainTable.appendChild(headerrow);
+ totalarrow();
 }
 
 
 
-  
-   
-   
-
-
-
-
-
-  
-
-
-
-
-
-//kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
   totalarrow ();
 
 
