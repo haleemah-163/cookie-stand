@@ -215,11 +215,12 @@ var addedlocation=[event.target.ln.value,event.target.min.value,event.target.max
 //  locationObjects.push(newlocation);
 mainTable.removeChild(headerrow);
  newlocation.rancusthour();
- newlocation.cookieshourrancust();
+ newlocation.cookieshourrancust(); 
  newlocation.run();
 
 
  totalarrow();
+ 
 }
 
 

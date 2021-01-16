@@ -1,4 +1,34 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+header{
+    height:100%;
+    width: 100%;
+}
+h3{
+    font-family: 'Hachi Maru Pop', cursive;
+
+    color: rgb(3, 75, 99);
+    float: right;
+    margin: 20px;
+    
+}
+
+li{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(146, 5, 40);
+}
+.lo{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(146, 5, 40);
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(9, 7, 87);
+    
+}
 
 td,th,table {
     border: 2px solid rgb(124, 34, 34);
@@ -10,29 +40,43 @@ table{
     margin-left: 150px;
     margin-top: 150px;
     border-collapse: collapse;
-    background-color: rgb(248, 217, 177);
+    background-color: rgb(248, 222, 190);
 }
 form{
     margin-left: 150px;
     margin-top: 150px;
+       
+}
+label{
+    font-family: 'Lobster', cursive;
     
-   
-
-   
-    
+    font-weight: lighter;
+    color: rgb(151, 70, 3);
+}
+input{
+    background-color: rgb(238, 247, 248);
 }
 button{
     float: right;
 }
 fieldset{
     height: 200px;
-    border: 2px solid rgb(124, 34, 34); }
+    border: 2px solid rgb(124, 34, 34);
+    font-family: 'Lobster', cursive;
+    
+    font-weight: lighter;
+    color: rgb(151, 70, 3); }
+    
 
 td{
     background-color: rgb(214, 246, 247);
 }
 body{
     background-color: cornsilk;
+    width: 100%;
+    
+        
+    
 }
 .logo{
     width: 100px;
@@ -57,18 +101,59 @@ li{
     margin-top: 0px;
 }
 .img{
-    float: left;
+    float: right;
 }
+.img2{
+float: left;
+border-radius: 30px;
+}
+
 .link{
     width: 100%px;
     height: 150px;
 }
 main{
-    width: 100%px;
-    height: 150px;
+    height: 100px;
 }
-.op{
-    color: rgb(3, 75, 99);
+main div {
+    
+    
+    margin-top: 70px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+   
+}
+.bottom-left{
+    position: absolute;
+    bottom: 300px;
+    left: 86px;
+}
+main span{
+    position: relative;
+    margin-top: 150px;
+}
+ul{
+    list-style-image: url("data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcU%0AFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgo%0AKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAQABEDASIA%0AAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAYHBAX/xAAsEAACAQIEBAMJAAAAAAAAAAABAgME%0ABQAGERITFCIxITJhQUJTVGKSk9HS/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EAB4RAAIBAwUAAAAA%0AAAAAAAAAAAECABESMUFRYbHx/9oADAMBAAIRAxEAPwC15xznaDGaGkqrlNOW4cj22KRuECPMWUjt%0A9JJ9MLuSaa8VElxuGXq24cIM0UiV9Q0plfw2sFkQEdJDak+mGXPy08DRxw5a5+SdizSLG4Qtpp1b%0AEYN5uze0Y4WXLfnikppKuniCTxoRy1XKoWYhekbQvh7oB3DTse2mDuXLAHFdO/IhLQhK7cSpcKT5%0AiT7V/WDGTbdvj0X4G/vBhEPP/9k=");
+   
+}
+footer{
+    position: sticky;
+    margin-top: 750px;
+    position: absolute;
+}
+
+footer h4{
+    font-family: 'Hachi Maru Pop', cursive;
+    color: rgb(29, 51, 6);
     float: right;
-    margin: 20px;
+}
+footer h4 img{
+    border-radius: 50px;
+}
+footer p {
+    font-family: 'Satisfy', cursive;
+}
+footer img{ 
+    float: right;
 }
